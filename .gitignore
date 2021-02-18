@@ -2,5 +2,6 @@
 *.DS_store
 .vscode/
 data/
+images/
 .ipynb_checkpoints/
 mos/
