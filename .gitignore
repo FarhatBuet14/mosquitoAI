@@ -1,10 +1,11 @@
 *.mov
 *.DS_store
+*.hdf5
 .vscode/
-data/
 images/
-images_gprs/
-larvae_photos/
 .ipynb_checkpoints/
 bbox/annotated_images/
 bbox/confusion/
+annotation/Siddhant/
+data/
+speciesClassificationModel/input/
