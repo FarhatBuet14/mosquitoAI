@@ -3,7 +3,7 @@ from tqdm import tqdm
 import shutil
 import json
 
-image_dir = "larvae_photos/"
+image_dir = "data/larvae_photos/"
 anno_dir = "annotation/"
 
 folder_names = {"culex": "Culex - 1519", "aedes": "Aedes - 2243", "anno": "Anopheles - 1672"}
@@ -11,7 +11,6 @@ species = list(folder_names.keys())
 if(not os.path.isdir("bbox/")): os.makedirs("bbox/")
 
 for spec in species:
-    # spec = species[0]
     spec_dir = image_dir + folder_names[spec] + "/"
 
     if(not os.path.isdir("bbox/confusion/")): os.makedirs("bbox/confusion/")
@@ -19,7 +18,7 @@ for spec in species:
     if(not os.path.isdir(conf_dir)): os.makedirs(conf_dir)
 
     if(not os.path.isdir("bbox/annotated_images/")): os.makedirs("bbox/annotated_images/")
-    annoImg_dir = "bbox/annotated_images/" + f'/{spec}/'
+    annoImg_dir = "bbox/annotated_images" + f'/{spec}/'
     if(not os.path.isdir(annoImg_dir)): os.makedirs(annoImg_dir)
 
     # if(not os.path.isdir("bbox/left_images/")): os.makedirs("bbox/left_images/")
@@ -42,6 +41,7 @@ for spec in species:
                 shutil.copy(spec_dir + name, conf_dir + name)
             else:
                 shutil.copy(spec_dir + name, annoImg_dir + name)
+                values["file_path"] = annoImg_dir + name
                 dic[images[i]] = values
         # else:
         #     shutil.copy(spec_dir + name, leftImg_dir + name)

@@ -1,4 +1,27 @@
 iNaturalist - Adult
-MosquitoAlert - Adult
+MosquitoAlert - Adult >> Aedes vittatus (Some)
 GLOBE - Larvae
 Portal_API - ALL
+
+
+---------- Mona Paper
+
+ - Aedes (81) - 𝑎𝑒𝑔𝑦𝑝𝑡𝑖 (82), 𝑖𝑛𝑓𝑖𝑟𝑚𝑎𝑡𝑢𝑠, 𝑡𝑎𝑒𝑛𝑖𝑜𝑟h𝑦𝑛𝑐h𝑢𝑠
+ - Anopheles (77) - 𝑐𝑟𝑢𝑐𝑖𝑎𝑛𝑠, 𝑞𝑢𝑎𝑑𝑟𝑖𝑚𝑎𝑐𝑢𝑙𝑎𝑡𝑢𝑠, 𝑠𝑡𝑒𝑝h𝑒𝑛𝑠𝑖 (93)
+ - Culex (92) - 𝑐𝑜𝑟𝑜𝑛𝑎𝑡𝑜𝑟, 𝑛𝑖𝑔𝑟𝑖𝑝𝑎𝑙𝑝𝑢𝑠, 𝑠𝑎𝑙𝑖𝑛𝑎𝑟𝑖𝑢𝑠
+
+About 700-800 images, total - 6807
+
+
+
+---------- Mine Work
+
+ - Larvae_Photos
+ 	- data
+	 	- Aedes - 2243
+	 	- Anopheles - 1672
+	 	- Culex - 1519
+	- Annotated with bbox
+	 	- Aedes - 115
+	 	- Anopheles - 6
+	 	- Culex - 68
