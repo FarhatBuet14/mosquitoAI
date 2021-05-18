@@ -26,20 +26,12 @@ data_dir = f'{directory}/bbox/annotated_images'
 anno_dir = f'{directory}/bbox'
 species = {"aedes", "anno", "culex"}
 
-# --- Test Annotations
-# def annotate_image(pth, marks):
-#     img = cv2.cvtColor(cv2.imread(pth), cv2.COLOR_BGR2RGB)
+# # --- Test Annotations
+# def annotate_image(img, marks):
 #     for mark in marks:
 #         x, y, h, w = mark
 #         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
 #     return img
-
-# aList = [i for i in range(len(paths))]
-# for i in random.sample(aList, 10):
-#     img = annotate_image(paths[i], bbox[i])
-#     cv2.imshow('ImageWindow', img)
-#     cv2.waitKey()
-
 
 # --- Extract Annotations
 train_df = pd.DataFrame()
@@ -49,7 +41,7 @@ test_df = pd.DataFrame()
 for spec in species:
 
     dataset = []
-    
+
     with open(f'{anno_dir}/{spec}.json') as f:
         print(f'Reading {spec} Data')
         anno_file = json.load(f)
@@ -76,6 +68,11 @@ for spec in species:
             if(round(y+h) > height): data["y_max"] = int(round(height))
             else: data["y_max"] = int(round(y+h))
             data['class_name'] = mark["region_attributes"]["bbox"]
+            
+            # img_2 = annotate_image(img, [[x, y, h, w]])
+            # cv2.imshow('ImageWindow', img_2)
+            # cv2.waitKey()
+            
             dataset.append(data)
 
     df = pd.DataFrame(dataset)
@@ -92,7 +89,7 @@ for spec in species:
     test_df = pd.concat([test_df, rest[~rest.file_name.isin(val_files)]])
 
 train_df.to_csv(f'codes/fbc_det2/train.csv', header=True, index=None)
-val_df.to_csv(f'/codes/fbc_det2/val.csv', header=True, index=None)
-test_df.to_csv(f'/codes/fbc_det2/test.csv', header=True, index=None)
+val_df.to_csv(f'codes/fbc_det2/val.csv', header=True, index=None)
+test_df.to_csv(f'codes/fbc_det2/test.csv', header=True, index=None)
 
 print("Finished Prepartion...")

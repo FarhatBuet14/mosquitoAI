@@ -41,14 +41,16 @@ torch.manual_seed(RANDOM_SEED)
 #########################################    Start Codes    #########################################
 
 # --- Directories
-data_type = "train" #val #test
-COCO_DIR = "/media/farhat/Farhat_SSD/MarkNET" + "/data/coco/" 
-OUTPUT_DIR = "/media/farhat/Research/GitHub/Mark-NET/outputs/detectron2/"
+directory = f'/Users/farhat/farhat_files/google_backup/research/GitHub/mosquitoNET'
+data_dir = f'{directory}/bbox/annotated_images'
+anno_dir = f'{directory}/bbox'
+species = {"aedes", "anno", "culex"}
+output_dir = f'{directory}/outputs/fbc_det2/'
 
 
 # --- Load Annotations
-train_df = pd.read_csv(COCO_DIR + "/anno/marks_annotations_train.csv")
-val_df = pd.read_csv(COCO_DIR + "/anno/marks_annotations_val.csv")
+train_df = pd.read_csv(f'codes/fbc_det2/train.csv')
+val_df = pd.read_csv(f'codes/fbc_det2/val.csv')
 
 classes = train_df.class_name.unique().tolist()
 
@@ -115,7 +117,7 @@ cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_50_F
 cfg.DATASETS.TRAIN = ("mark_train",)
 cfg.DATASETS.TEST = ("mark_val",)
 
-cfg.DATALOADER.NUM_WORKERS = 4
+# cfg.DATALOADER.NUM_WORKERS = 4
 cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml")
 
 cfg.SOLVER.IMS_PER_BATCH = 4
@@ -125,13 +127,13 @@ cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 256
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 1
 cfg.TEST.EVAL_PERIOD = 500
 
-cfg.num_gpus = 1
-cfg.OUTPUT_DIR = OUTPUT_DIR + str(datetime.now())[:-10].replace(":", "_")
-os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
+# cfg.num_gpus = 1
+cfg.output_dir = output_dir + str(datetime.now())[:-10].replace(":", "_")
+os.makedirs(cfg.output_dir, exist_ok=True)
 cfg.MODEL.MASK_ON = False
 
 import pickle
-filename = cfg.OUTPUT_DIR + '/config.pkl'
+filename = cfg.output_dir + '/config.pkl'
 with open(filename, 'wb') as f:
      pickle.dump(cfg, f)
 

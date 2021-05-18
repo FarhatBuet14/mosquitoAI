@@ -13,6 +13,11 @@ Portal_API - ALL
 About 700-800 images, total - 6807
 
 
+---------- Extra 
+
+- Aedes Scapularis
+- Aedes Mediovittatus
+- Aedes Vittatus
 
 ---------- Mine Work
 
@@ -22,6 +27,6 @@ About 700-800 images, total - 6807
 	 	- Anopheles - 1672
 	 	- Culex - 1519
 	- Annotated with bbox
-	 	- Aedes - 115
-	 	- Anopheles - 6
-	 	- Culex - 68
+	 	- Aedes - 100
+	 	- Anopheles - 200
+	 	- Culex - 204
