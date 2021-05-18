@@ -1,1 +1,1 @@
-# larvaeNET
+# mosquitoAI
