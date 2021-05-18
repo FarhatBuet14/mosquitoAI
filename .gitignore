@@ -2,10 +2,9 @@
 *.DS_store
 *.hdf5
 .vscode/
-images/
 .ipynb_checkpoints/
-bbox/annotated_images/
-bbox/confusion/
-annotation/Siddhant/
+larvaeNET/bbox/annotated_images/
+larvaeNET/bbox/confusion/
+larvaeNET/annotation/Siddhant/
 data/
-speciesClassificationModel/input/
+adultNET/compass/input/
