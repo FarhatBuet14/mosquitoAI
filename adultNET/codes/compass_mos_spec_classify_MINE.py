@@ -23,8 +23,9 @@ mosquitoes = ['Aegypti', 'Crucians', 'Infirmatus', 'Nigrip', 'Peturbans', 'Taeni
 
 #aedes aegypti, anopheless crucians, aedes Infirmatus, culex nigripalpus, coquillettidia perturbans, Aedes taeniorhynchus, mansonia titillans
 
-model = load_model('./speciesClassificationModel/0.8156weights.0.8025.hdf5')
-file, input_path = "mosquito_march_18.jpg", "./speciesClassificationModel/input/"
+folder_link = f'adultNET/compass'
+model = load_model(f'{folder_link}/0.8156weights.0.8025.hdf5')
+file, input_path = "mosquito_march_18.jpg", f'{folder_link}/input/'
 
 #Uncomment below code to classify a single mosquito, change the file path above
 """
@@ -48,7 +49,7 @@ for filename in os.listdir(input_path):
         X.append(x)
         filenames.append(filename)
 
-with open('species.csv', 'w', newline='') as file:
+with open(f'{folder_link}/species.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     res = model.predict(np.array(X).astype('float32')).tolist()
     for i, val in enumerate(res):

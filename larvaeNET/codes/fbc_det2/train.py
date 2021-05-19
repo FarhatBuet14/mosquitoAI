@@ -1,5 +1,3 @@
-# python train.py
-
 import torch, torchvision
 import detectron2
 from detectron2.utils.logger import setup_logger
@@ -41,16 +39,16 @@ torch.manual_seed(RANDOM_SEED)
 #########################################    Start Codes    #########################################
 
 # --- Directories
-directory = f'/Users/farhat/farhat_files/google_backup/research/GitHub/mosquitoNET'
-data_dir = f'{directory}/bbox/annotated_images'
-anno_dir = f'{directory}/bbox'
+directory = f'/Users/farhat/farhat_files/google_backup/research/GitHub/mosquitoAI'
+data_dir = f'{directory}/larvaeNET/bbox/annotated_images'
+anno_dir = f'{directory}/larvaeNET/bbox'
 species = {"aedes", "anno", "culex"}
-output_dir = f'{directory}/outputs/fbc_det2/'
+output_dir = f'{directory}/larvaeNET/outputs/fbc_det2/'
 
 
 # --- Load Annotations
-train_df = pd.read_csv(f'codes/fbc_det2/train.csv')
-val_df = pd.read_csv(f'codes/fbc_det2/val.csv')
+train_df = pd.read_csv(f'larvaeNET/codes/fbc_det2/train.csv')
+val_df = pd.read_csv(f'larvaeNET/codes/fbc_det2/val.csv')
 
 classes = train_df.class_name.unique().tolist()
 

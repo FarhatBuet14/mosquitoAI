@@ -4,21 +4,21 @@ import shutil
 import json
 
 image_dir = "data/larvae_photos/"
-anno_dir = "annotation/"
+anno_dir = "larvaeNET/annotation/"
 
 folder_names = {"culex": "Culex - 1519", "aedes": "Aedes - 2243", "anno": "Anopheles - 1672"}
 species = list(folder_names.keys())
-if(not os.path.isdir("bbox/")): os.makedirs("bbox/")
+if(not os.path.isdir("larvaeNET/bbox/")): os.makedirs("larvaeNET/bbox/")
 
 for spec in species:
     spec_dir = image_dir + folder_names[spec] + "/"
 
-    if(not os.path.isdir("bbox/confusion/")): os.makedirs("bbox/confusion/")
-    conf_dir = "bbox/confusion/" + f'/{spec}/'
+    if(not os.path.isdir("larvaeNET/bbox/confusion/")): os.makedirs("larvaeNET/bbox/confusion/")
+    conf_dir = "larvaeNET/bbox/confusion/" + f'/{spec}/'
     if(not os.path.isdir(conf_dir)): os.makedirs(conf_dir)
 
-    if(not os.path.isdir("bbox/annotated_images/")): os.makedirs("bbox/annotated_images/")
-    annoImg_dir = "bbox/annotated_images" + f'/{spec}/'
+    if(not os.path.isdir("larvaeNET/bbox/annotated_images/")): os.makedirs("larvaeNET/bbox/annotated_images/")
+    annoImg_dir = "larvaeNET/bbox/annotated_images" + f'/{spec}/'
     if(not os.path.isdir(annoImg_dir)): os.makedirs(annoImg_dir)
 
     # if(not os.path.isdir("bbox/left_images/")): os.makedirs("bbox/left_images/")
@@ -46,7 +46,7 @@ for spec in species:
         # else:
         #     shutil.copy(spec_dir + name, leftImg_dir + name)
     
-    with open("bbox/" + spec + '.json', 'w') as fp:
+    with open("larvaeNET/bbox/" + spec + '.json', 'w') as fp:
         json.dump(dic, fp)
     dic = {}
 

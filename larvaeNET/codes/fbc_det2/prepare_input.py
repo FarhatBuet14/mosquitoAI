@@ -1,5 +1,3 @@
-# python prepare_input.py
-
 import os
 import numpy as np
 import cv2
@@ -21,9 +19,9 @@ np.random.seed(RANDOM_SEED)
 #########################################    Start Codes    #########################################
 
 # --- Directories
-directory = f'/Users/farhat/farhat_files/google_backup/research/GitHub/mosquitoNET'
-data_dir = f'{directory}/bbox/annotated_images'
-anno_dir = f'{directory}/bbox'
+directory = f'/Users/farhat/farhat_files/google_backup/research/GitHub/mosquitoAI'
+data_dir = f'{directory}/larvaeNET/bbox/annotated_images'
+anno_dir = f'{directory}/larvaeNET/bbox'
 species = {"aedes", "anno", "culex"}
 
 # # --- Test Annotations
@@ -50,14 +48,14 @@ for spec in species:
 
     for index in tqdm(range(0, len(specimens))):
         specimen = specimens[index]
-        img = cv2.cvtColor(cv2.imread(f'{directory}/{anno_file[specimen]["file_path"]}'), cv2.COLOR_BGR2RGB)
+        img = cv2.cvtColor(cv2.imread(f'{directory}/larvaeNET/{anno_file[specimen]["file_path"]}'), cv2.COLOR_BGR2RGB)
         width = img.shape[1]
         height =img.shape[0]
         for i in range(0, len(anno_file[specimen]['regions'])):
             mark = anno_file[specimen]['regions'][str(i)]
             data = {}
             c, x, y, w, h = mark["shape_attributes"].values()
-            data['file_path'] = anno_file[specimen]["file_path"]
+            data['file_path'] = f'larvaeNET/{anno_file[specimen]["file_path"]}'
             data['file_name'] = anno_file[specimen]["filename"]
             data['width'] = width
             data['height'] = height
@@ -88,8 +86,8 @@ for spec in species:
     val_df = pd.concat([val_df, rest[rest.file_name.isin(val_files)]])
     test_df = pd.concat([test_df, rest[~rest.file_name.isin(val_files)]])
 
-train_df.to_csv(f'codes/fbc_det2/train.csv', header=True, index=None)
-val_df.to_csv(f'codes/fbc_det2/val.csv', header=True, index=None)
-test_df.to_csv(f'codes/fbc_det2/test.csv', header=True, index=None)
+train_df.to_csv(f'larvaeNET/codes/fbc_det2/train.csv', header=True, index=None)
+val_df.to_csv(f'larvaeNET/codes/fbc_det2/val.csv', header=True, index=None)
+test_df.to_csv(f'larvaeNET/codes/fbc_det2/test.csv', header=True, index=None)
 
 print("Finished Prepartion...")

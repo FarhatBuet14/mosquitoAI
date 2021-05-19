@@ -37,6 +37,8 @@ import numpy as np
 #         f.write(request.urlopen(url_list[pos]).read())
 #         f.close()
 
+
+# ---------------  http way of download  -----------------
 # import http.client, urllib.request, urllib.parse, urllib.error, base64
 
 # headers = {
