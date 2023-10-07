@@ -9,8 +9,11 @@ It presents an application of the Faster Region-based Convolutional Neural Netwo
 * Python 3.10.12
 * Tensorflow 2.12
 * Keras 2.12
+* detectron2
 
 ## Larvae Full Body Localization
+
+### Model Architecture - *Faster R-CNN* (base model - resnet50)
 
 | Metric  | Value             |
 |---------|-------------------|
@@ -23,6 +26,8 @@ It presents an application of the Faster Region-based Convolutional Neural Netwo
 ![crop_result.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeLocalization/larvae_full_body_localization/images/crop_result.png)
 
 ## Larvae Body Parts (Head, Thorax, Abdomen, Lower) Localization
+
+### Model Architecture - *Faster R-CNN* (base model - resnet50)
 
 | Metric           | Value             |
 |------------------|-------------------|
