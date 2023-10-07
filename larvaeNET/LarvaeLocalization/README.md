@@ -3,7 +3,7 @@ It presents an application of the Faster Region-based Convolutional Neural Netwo
 
 ## Dataset Details
 
-![dataset.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeLocalization/larvae_full_body_localization/images/images/dataset_details.png)
+![dataset.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeLocalization/larvae_full_body_localization/images/dataset_details.png)
 
 ## Requirements
 * Python 3.10.12
