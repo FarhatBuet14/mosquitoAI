@@ -1,1 +1,1 @@
-# mosquitoAI
+![dashboards.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/dashboards.png)
