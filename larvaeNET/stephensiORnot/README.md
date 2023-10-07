@@ -6,7 +6,7 @@ What sets our study apart is the incorporation of explainable AI techniques, inc
 
 ## Dataset Details
 
-![dataset.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeLocalization/stephensiORnot/images/dataset_details.png)
+![dataset.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/stephensiORnot/images/dataset_details.png)
 
 ## Requirements
 * Python 3.10.12
