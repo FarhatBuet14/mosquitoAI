@@ -42,4 +42,4 @@ It presents an application of the Faster Region-based Convolutional Neural Netwo
 
 ![test_results.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeLocalization/larvae_anatomy_localization/images/test_results.png)
 
-We are also hosting this localizaion test process in the [website](https://mosquito-localization.web.app/) where you can upload an image and check the results with the bounding boxes within less than a minute. The model in this website is the EfficientNetB0.
+We are also hosting this localizaion test process in the [website](https://mosquito-localization.web.app/) where you can upload an image and check the results with the bounding boxes within less than a minute.
