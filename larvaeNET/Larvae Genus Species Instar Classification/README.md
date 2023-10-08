@@ -29,7 +29,7 @@ In conclusion, this research represents a significant contribution to the field 
 
 ## Dataset Details
 
-![dataset_details.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeSpeciesInstarClassification/images/dataset_details.png)
+![dataset_details.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/Larvae Genus Species Instar Classification/images/dataset_details.png)
 
 ## Requirements
 * Python 3.10.12
@@ -42,10 +42,10 @@ In conclusion, this research represents a significant contribution to the field 
 
 ### Confusion Matrix - Validation Set
 
-![validation_result.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeSpeciesInstarClassification/images/validation_result.png)
+![validation_result.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/Larvae Genus Species Instar Classification/images/validation_result.png)
 
 ### Confusion Matrix - Test Set
 
-![test_result.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/LarvaeSpeciesInstarClassification/images/test_result.png)
+![test_result.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/Larvae Genus Species Instar Classification/images/test_result.png)
 
 
