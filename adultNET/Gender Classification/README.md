@@ -10,7 +10,7 @@ This research not only advances the field of entomology but also underscores the
 
 ## Dataset Details
 
-![dataset_details.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/adultNET/Gender Classification/images/dataset_details.png)
+![dataset_details.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/adultNET/Gender%20Classification/images/dataset_details.png)
 
 ## Requirements
 * Python 3.10.12
@@ -41,4 +41,4 @@ Total Accuracy: 86.11%
 
 ### Test Grad-CAMs
 
-![test_results.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/adultNET/Gender Classification/images/test_results.png)
+![test_results.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/adultNET/Gender%20Classification/images/test_results.png)
