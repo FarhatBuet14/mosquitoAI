@@ -27,3 +27,25 @@ To foster collaboration and further research, we provide access to our trained m
 
 In conclusion, this research represents a significant contribution to the field of entomology and disease control, showcasing the importance of explainable AI techniques in model selection and evaluation. By harnessing the capabilities of cutting-edge deep learning models and making them interpretable, we aim to significantly improve the accuracy and efficiency of mosquito larvae classification, ultimately advancing global health efforts in combatting mosquito-borne diseases.
 
+## Dataset Details
+
+![dataset_details.png](https://github.com/FarhatBuet14/mosquitoAI/tree/main/larvaeNET/LarvaeSpeciesInstarClassification/images/dataset_details.png)
+
+## Requirements
+* Python 3.10.12
+* Tensorflow 2.12
+* Keras 2.12
+
+## Test Result
+
+### Model Architecture - *EfficientNET-B0*
+
+### Confusion Matrix - Validation Set
+
+![validation_result.png](https://github.com/FarhatBuet14/mosquitoAI/tree/main/larvaeNET/LarvaeSpeciesInstarClassification/images/validation_result.png)
+
+### Confusion Matrix - Test Set
+
+![test_result.png](https://github.com/FarhatBuet14/mosquitoAI/tree/main/larvaeNET/LarvaeSpeciesInstarClassification/images/test_result.png)
+
+
