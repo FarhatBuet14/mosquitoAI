@@ -5,7 +5,7 @@ It presents an application of the Faster Region-based Convolutional Neural Netwo
 
 Our computer vision team at the University of South Florida gathered a dataset of 241 smartphone photos of verified specimens of An. stephensi and An. gambiae. The photos were taken via smartphone at the insectaries at USF and the Centers for Disease Control and Prevention (CDC).
 
-![dataset.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/Larvae Localization/larvae_full_body_localization/images/dataset_details.png)
+![dataset.png](https://github.com/FarhatBuet14/mosquitoAI/blob/main/larvaeNET/Larvae%20Localization/larvae_anatomy_localization/images/dataset_details.png)
 
 ## Requirements
 * Python 3.10.12
